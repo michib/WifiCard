@@ -1,0 +1,105 @@
+.cutedge {
+  display: inline-block;
+  border: 2px dashed black;
+}
+
+.border {
+  width: 13cm;
+  height: 18cm;
+  background-image: repeating-linear-gradient(
+      -45deg,
+    white,
+    white 5px,
+    rgba(0,0,0,.5) 5px,
+    rgba(0,0,0,.5) 10px
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  @extend .center;
+  background: white;
+  height: 16cm;
+  width: 11cm;
+  position: relative;
+}
+
+.homeiswherethewificonnects {
+  @extend .center;
+  font-family: 'Indie Flower', cursive;
+  font-size: 3em;
+
+  mat-icon {
+    font-size: 1.5em;
+    height: auto;
+    width: auto;
+  }
+}
+
+.wifi-data-font-family {
+  font-family: 'Raleway', sans-serif;
+}
+
+.wifi-data {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  @extend .wifi-data-font-family;
+  display: flex;
+  align-items: flex-end;
+  flex-grow: 1;
+  font-weight: 600;
+  color: rgba(0,0,0,.9);
+
+  .title {
+    display: inline-block;
+    width: 90px;
+  }
+
+  ::ng-deep {
+    .mat-form-field {
+      @extend .wifi-data-font-family;
+    }
+
+    .mat-form-field-infix {
+      border-top: none;
+    }
+
+    .mat-input-element {
+      line-height: 1.5em;
+      font-weight: 600;
+    }
+
+    .mat-form-field-appearance-legacy {
+      .mat-form-field-wrapper {
+        padding-bottom: 0;
+      }
+
+      .mat-form-field-underline {
+        bottom: 5px;
+      }
+    }
+  }
+}
+
+.nfc-icon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  color: rgba(0,0,0,.8);
+  @extend .center;
+
+  .mat-icon {
+    font-size: 2.5em;
+    height: auto;
+    width: auto;
+  }
+}

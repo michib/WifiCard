@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "WifiImage": {
+    "WifiCard": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/WifiImage",
+            "outputPath": "dist/WifiCard",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,6 +23,9 @@
               "src/assets"
             ],
             "styles": [
+              {
+                "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+              },
               "src/styles.css"
             ],
             "scripts": []
@@ -50,18 +53,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "WifiImage:build"
+            "browserTarget": "WifiCard:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "WifiImage:build:production"
+              "browserTarget": "WifiCard:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "WifiImage:build"
+            "browserTarget": "WifiCard:build"
           }
         },
         "test": {
@@ -72,6 +75,9 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
+              {
+                "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+              },
               "src/styles.css"
             ],
             "scripts": [],
@@ -95,7 +101,7 @@
         }
       }
     },
-    "WifiImage-e2e": {
+    "WifiCard-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +109,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "WifiImage:serve"
+            "devServerTarget": "WifiCard:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "WifiImage:serve:production"
+              "devServerTarget": "WifiCard:serve:production"
             }
           }
         },
@@ -123,5 +129,5 @@
       }
     }
   },
-  "defaultProject": "WifiImage"
+  "defaultProject": "WifiCard"
 }
